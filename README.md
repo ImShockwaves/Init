@@ -9,15 +9,16 @@ Projects :
 * [x] **Roger-skyline-v1**
 * [x] **docker-1**
 
-### Docker-1
+### init
 ***
 ```
-The aim of the Docker-1 project is to make you handle docker and docker-machine, the
-bases to understand the idea of containerization of services. You can see this project as
-an initiation. 
+This first project, init, will give you the opportunity to discover system and network
+basic commands, many of the services used on a server machine, as well as a few ideas of
+scripts that can be useful for SysAdmins on a daily basis.
 ```
 ## author
 
 From the System and network administration 42 branch
 
 By [**ccharrie**](https://profile.intra.42.fr/users/ccharrie)
+
