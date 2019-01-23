@@ -1,0 +1,3 @@
+Pour faire pointer cetter adresse sur l'intra il suffit de rajouter au fichier /etc/hosts :
+
+46.19.122.85	intra.42.fr

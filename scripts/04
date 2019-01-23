@@ -1,0 +1,22 @@
+if ! [ -e "~/crontab.sum"  ];
+then
+	cat /etc/crontab > ~/crontab.sum
+fi
+
+file1_md5=$( md5sum "~/crontab.sum" | awk '{print $1}')
+file2_md5=$( md5sum "/etc/crontab" | awk '{print $1}')
+
+if [ "x$file1_md5" = "x$file2_md5" ]
+then
+	printf "No modification \n"
+	exit 0
+else
+	printf "Modification detected, mail send\n"
+	mail -s "Crontab have changed" root@localhost.localdomain
+	cat /etc/crontab > ~/crontab.sum
+	exit 1
+fi
+
+# crontab -e
+# 0 0 * * * /bin/sh /usr/local/bin/04.sh /var
+# tous les jours a minuit
